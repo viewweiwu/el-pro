@@ -23,11 +23,16 @@ export default {
       let form = {}
       let map = {
         'input': '',
-        'select': null
+        'select': null,
+        'checkbox': [],
+        'checkbox-single': false,
+        'date': new Date(),
+        'radio': '',
+        'switch': false
       }
       this.formList.forEach(item => {
         let defaultValue = ''
-        defaultValue = item.defaultValue !== undefined ? item.defaultValue : map[item.key]
+        defaultValue = item.defaultValue !== undefined ? item.defaultValue : map[item.type]
         form[item.key] = defaultValue
       })
       return form
@@ -42,6 +47,21 @@ export default {
             break
           case 'select':
             content = this.renderSelect(h, item)
+            break
+          case 'checkbox':
+            content = this.renderCheckbox(h, item)
+            break
+          case 'checkbox-single':
+            content = this.renderCheckboxSingle(h, item)
+            break
+          case 'date':
+            content = this.renderDatePicker(h, item)
+            break
+          case 'radio':
+            content = this.renderRadio(h, item)
+            break
+          case 'switch':
+            content = this.renderSwitch(h, item)
             break
         }
         return <el-form-item>
@@ -91,6 +111,38 @@ export default {
           </el-option>
         })}
       </el-select>
+    },
+    // 渲染 checkbox
+    renderCheckbox(h, item) {
+      return <el-checkbox-group
+        v-model={this.form[item.key]}
+        onInput={this.onInput(item)}>
+        {item.options.map(option => {
+          return <el-checkbox label={option.value}>{option.text}
+          </el-checkbox>
+        })}
+      </el-checkbox-group>
+    },
+    // 渲染 单个checkbox
+    renderCheckboxSingle(h, item) {
+      return <el-checkbox v-model={this.form[item.key]}>{item.text}</el-checkbox>
+    },
+    // 渲染 datepicker
+    renderDatePicker(h, item) {
+      return <el-date-picker
+        v-model={this.form[item.key]}
+        type="date"
+        placeholder={item.placeholder || '请选择日期'}>
+      </el-date-picker>
+    },
+    renderRadio(h, item) {
+      return <span>{item.options.map(option => {
+        return <el-radio v-model={this.form[item.key]} label={option.value}>{option.text}
+        </el-radio>
+      })}</span>
+    },
+    renderSwitch(h, item) {
+      return <el-switch v-model={this.form[item.key]}></el-switch>
     },
     // 清空 form 表单
     reset() {
