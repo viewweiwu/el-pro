@@ -1,0 +1,29 @@
+.base {
+    .base-aside {
+        color: #fff;
+    }
+    .base-logo {
+        height: @size * .6;
+        .flexCenter();
+        font-size: 30px;
+        text-shadow:
+            0 1px #001529,
+            0 3px #fff;
+        color: #fff;
+    }
+    .base-menu {
+        .base-menu-item {
+            height: @space * 5;
+            .borderTop(#fff);
+            padding: 0 @space;
+            .flexBetween();
+            cursor: pointer;
+            &:hover {
+                background-color: #00284e;
+            }
+            &:last-child {
+                .borderBottom(#fff);
+            }
+        }
+    }
+}

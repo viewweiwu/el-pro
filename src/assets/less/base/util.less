@@ -1,0 +1,233 @@
+
+
+// 背景
+.not-bg {
+    background-color: transparent!important;
+}
+.bg-yellow {
+    background-color: @yellow!important;
+}
+.bg-light-blue {
+    background-color: lighten(@blue, 15%)!important;
+}
+.bg-blue {
+    background-color: @blue!important;
+}
+.bg-deep-blue {
+    background-color: darken(@blue, 20%)!important;
+}
+.bg-light-orange {
+    background-color: lighten(@orange, 5%)!important;
+}
+.bg-orange {
+    background-color: @orange!important;
+}
+.bg-deep-orange {
+    background-color: darken(@orange, 20%)!important;
+}
+.bg-green {
+    background-color: @green!important;
+}
+.bg-deep-green {
+    background-color: green!important;
+}
+.bg-purple {
+    background-color: @purple!important;
+}
+.bg-red {
+    background-color: @red!important;
+}
+.bg-pink {
+    background-color: lighten(@red, 10%)!important;
+}
+.bg-white {
+    background-color: @white!important;
+}
+.bg-light {
+    background-color: @bg-light!important;
+}
+.bg-gray {
+    background-color: #f5f7fa!important;
+}
+.bg-active {
+    background-color: #ecf5ff!important;
+}
+
+// 文字颜色
+.font-primary {
+    color: #2D2F33;
+}
+.font-normal {
+    color:#5e6d82
+}
+.font-sub {
+    color:#878D99
+}
+.font-transparent {
+    color: transparent;
+}
+.font-default {
+    color: @defaultFont;
+}
+.font-disabled {
+    color: #ddd;
+}
+.font-gray {
+    color: @grayFont;
+}
+.font-light-gray {
+    color: @deepBorder;
+}
+.font-blue {
+    color: @blue;
+}
+.font-blue-light {
+    color: @blue-light;
+}
+.font-orange {
+    color: @orange;
+}
+.font-green {
+    color: @green;
+}
+.font-deep-green {
+    color: darken(@green, 5%);
+}
+.font-red {
+    color: @red;
+}
+.font-yellow {
+    color: @yellow;
+}
+.font-purple {
+    color: @purple;
+}
+.font-white {
+    color: @white;
+}
+.font-border {
+    color: @deepBorder;
+}
+.link {
+    color: @blue;
+    cursor: pointer;
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+// 字体大小
+.x-small {
+    font-size: 12px;
+}
+.small {
+    font-size: 13px;
+}
+.normal {
+    font-size: 14px;
+}
+.big {
+    font-size: 16px;
+}
+.x-big {
+    font-size: 18px;
+}
+.xx-big {
+    font-size: 20px;
+}
+.max-big {
+    font-size: 22px;
+}
+
+// 文字粗体
+.bold {
+    font-weight: bold;
+}
+
+// 布局
+.between {
+    .flexBetween();
+}
+.center {
+    .center();
+}
+.fl {
+    float: left;
+}
+.fr {
+    float: right;
+}
+.clear {
+    overflow: hidden;
+}
+.hidden {
+    display: none !important;
+}
+
+// 文本对其
+.tc {
+    text-align: center;
+}
+.tl {
+    text-align: left !important;
+}
+.tr {
+    text-align: right;
+}
+.middle {
+    vertical-align: middle;
+}
+
+// 边框
+.bl {
+    .borderLeft();
+}
+.bt {
+    .borderTop();
+}
+.br {
+    .borderRight();
+}
+.bb {
+    .borderBottom();
+}
+
+// 间距
+.ms {
+    margin: @space;
+}
+.ms2 {
+    margin: @space * 2;
+}
+.ml {
+    margin-left: @space;
+}
+.mr {
+    margin-right: @space;
+}
+.mt {
+    margin-top: @space;
+}
+.mb {
+    margin-bottom: @space;
+}
+.ps {
+    padding: @space;
+}
+.pl {
+    padding-left: @space;
+}
+.pt {
+    padding-top: @space;
+}
+.pr {
+    padding-right: @space;
+}
+.pb {
+    padding-bottom: @space;
+}
+
+// 交互
+.cursor {
+    cursor: pointer;
+}
