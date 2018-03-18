@@ -11,6 +11,12 @@
     "build": "node build/build.js"
   },
   "dependencies": {
+    "axios": "^0.17.1",
+    "element-ui": "^2.0.11",
+    "less": "^2.7.3",
+    "less-loader": "^4.0.5",
+    "mockjs": "^1.0.1-beta3",
+    "normalize.css": "^7.0.0",
     "vue": "^2.5.2",
     "vue-router": "^3.0.1"
   },
