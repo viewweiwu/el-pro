@@ -85,11 +85,6 @@ const getRandom = (min = 0, max = 1) => {
   return Math.round(Math.random() * (max - min) + min)
 }
 
-<<<<<<< HEAD
-=======
-const _import = file => () => import('@/views/' + file + '.vue')
-
->>>>>>> 3af4bd9264230b099756bcc1d45cf8cac5e5a6af
 const getCurrMonthDate = () => {
   const end = new Date()
   const start = new Date()
@@ -143,10 +138,6 @@ export {
   formatDate,
   getOriginData,
   getRandom,
-<<<<<<< HEAD
-=======
-  _import,
->>>>>>> 3af4bd9264230b099756bcc1d45cf8cac5e5a6af
   getCurrMonthDate,
   dateConfig
 }

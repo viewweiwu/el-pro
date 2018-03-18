@@ -70,7 +70,6 @@ export default {
     initRender() {
       this.columns.forEach((cell, i) => {
         if (typeof cell.render === 'function') {
-<<<<<<< HEAD
           this.$refs.c[i].columnConfig.renderCell = (h, param) => {
             return h('div', {
               class: 'cell'
@@ -78,9 +77,6 @@ export default {
               cell.render(h, param)
             ])
           }
-=======
-          this.$refs.c[i].columnConfig.renderCell = (h, param) => cell.render(h, param)
->>>>>>> 3af4bd9264230b099756bcc1d45cf8cac5e5a6af
         }
       })
     },

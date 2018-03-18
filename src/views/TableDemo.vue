@@ -38,11 +38,7 @@ export default {
         key: 'address',
         width: 400,
         render: (h, param) => {
-<<<<<<< HEAD
           return <el-button size="small">{param.row.address}</el-button>
-=======
-          return h('el-button', param.row.address)
->>>>>>> 3af4bd9264230b099756bcc1d45cf8cac5e5a6af
         }
       }]
     }
