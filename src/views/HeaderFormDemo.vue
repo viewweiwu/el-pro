@@ -3,6 +3,7 @@
     <HeaderForm
       ref="headerForm"
       :formList="formList">
+      <el-button type="danger" @click="getFormData">获取 headerForm 值</el-button>
     </HeaderForm>
   </Container>
 </template>
@@ -22,6 +23,22 @@ export default {
           type: 'input',
           required: true,
           placeholder: '请输入姓名'
+        },
+        {
+          key: 'flower',
+          defaultValue: '❀',
+          renderTitle: (h, item) => {
+            return <span class="font-red">接下来我要渲染好多花</span>
+          },
+          renderContent: (h, item, form) => {
+            let colorList = ['red', 'blue', 'orange', 'purple', 'green']
+            setTimeout(() => {
+              if (form.flower.length < colorList.length) {
+                form.flower += '❀'
+              }
+            }, 500)
+            return <span class={'max-big font-' + colorList[form.flower.length - 1]}>{form.flower}</span>
+          }
         },
         {
           title: 'select',
@@ -125,6 +142,11 @@ export default {
           defaultValue: true
         }
       ]
+    }
+  },
+  methods: {
+    getFormData() {
+      console.log(this.$refs.headerForm.getForm())
     }
   }
 }

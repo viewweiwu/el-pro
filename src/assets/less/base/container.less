@@ -18,23 +18,6 @@
         .page-header {
             background-color: #fff;
         }
-        .page-body {
-            padding: @space;
-            padding-top: 0;
-        }
-        .page-body-top {
-            .left {
-                left: @space * 2;
-            }
-            .right {
-                top: 0;
-                right: @space * 2;
-                line-height: @size * .6;
-                padding: 0;
-                background-color: transparent;
-                position: absolute;
-            }
-        }
         .btn-prev,
         .btn-next {
             .border(#ddd);
@@ -51,6 +34,9 @@
 
     .page-header {
         .borderBottom();
+        .el-form-item {
+            margin-bottom: 0;
+        }
     }
     .page-body {
         position: relative;
@@ -60,23 +46,8 @@
     }
     .page-body-top {
         height: @size * .6;
-        .left {
-            line-height: @size * .6;
-            left: @space;
-            position: absolute;
-        }
-        .append {
-            top: @space;
-            right: @space;
-            position: absolute;
-        }
-        .right {
-            top: 0;
-            right: @space * 3;
-            padding: @space;
-            background-color: fadeout(@bg-dark, 50%);
-            z-index: 9;
-            position: fixed;
-        }
+        padding: 0 @space * 2;
+        background-color: #eee;
+        .flexBetween();
     }
 }

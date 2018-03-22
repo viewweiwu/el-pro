@@ -3,15 +3,15 @@
     <div class="page-header" v-show="hasHeader">
       <slot name="header"></slot>
     </div>
-    <div class="page-body" :class="{'mt': !hasTop}">
-      <div class="page-body-top" v-show="hasTop">
-        <div class="left">
-          <slot name="left"></slot>
-        </div>
-        <div class="right" v-show="hasRight">
-          <slot name="right"></slot>
-        </div>
+    <div class="page-body-top" v-show="hasTop">
+      <div class="left">
+        <slot name="left"></slot>
       </div>
+      <div class="right" v-show="hasRight">
+        <slot name="right"></slot>
+      </div>
+    </div>
+    <div class="page-body">
       <slot></slot>
     </div>
     <div class="page-footer">

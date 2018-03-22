@@ -1,5 +1,5 @@
 <template>
-  <div class="ps">
+  <div class="select-table">
     <el-table
       border
       @selection-change="onSelectionChange"
